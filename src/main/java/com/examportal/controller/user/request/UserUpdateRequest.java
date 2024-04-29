@@ -17,13 +17,11 @@ public class UserUpdateRequest {
   private String phoneNumber;
 
   public User toUser(User user) {
-    user.setId(id);
     if (null != this.email) user.setEmail(this.email);
     if (null != this.password) user.setPassword(this.password);
     if (null != this.firstName) user.setFirstName(this.firstName);
     if (null != this.lastName) user.setLastName(this.lastName);
     if (null != this.phoneNumber) user.setPhoneNumber(this.phoneNumber);
-
     return user;
   }
 }
