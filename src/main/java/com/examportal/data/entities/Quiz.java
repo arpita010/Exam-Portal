@@ -1,6 +1,7 @@
 package com.examportal.data.entities;
 
 import com.examportal.data.BaseEntity;
+import com.examportal.data.enums.Difficulty;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -29,6 +30,9 @@ public class Quiz extends BaseEntity {
   private Long maxScore;
 
   private Boolean isPublished;
+
+  @Enumerated(EnumType.STRING)
+  private Difficulty difficulty;
 
   @JsonBackReference(value = "category-quiz")
   @ManyToOne(fetch = FetchType.EAGER)

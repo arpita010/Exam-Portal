@@ -1,5 +1,6 @@
 package com.examportal.controller.category.response;
 
+import com.examportal.data.BaseResponse;
 import com.examportal.data.entities.Category;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryResponse {
+public class CategoryResponse extends BaseResponse {
   private Long categoryId;
   private String title;
   private String description;
