@@ -59,4 +59,9 @@ public class QuizQuestionService {
     quizQuestionRepo.delete(opt.get());
     return new BaseResponse(ResponseStatus.OKAY);
   }
+
+  public QuizQuestion findById(Long questionId) {
+    Optional<QuizQuestion> op = quizQuestionRepo.findById(questionId);
+    return op.orElse(null);
+  }
 }
